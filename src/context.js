@@ -1,46 +1,59 @@
-import React, { Component } from 'react'
-import {storeProducts, detailProduct } from './data';
-
+import React, {Component} from 'react'
+import {storeProducts, detailProduct} from './data';
 
 const ProductContext = React.createContext();
 
-
 class ProductProvider extends Component {
-    state ={
+    state = {
         products: [],
         detailsProduct: detailProduct
     };
-    componentDidMount(){
+    componentDidMount() {
         this.setProducts();
     }
-    setProducts = () =>{
+    setProducts = () => {
         let tempProducts = [];
         storeProducts.forEach(item => {
-            const singleItem = {...item};
-            tempProducts = [...tempProducts, singleItem];
+            const singleItem = {
+                ...item
+            };
+            tempProducts = [
+                ...tempProducts,
+                singleItem
+            ];
 
         });
-        this.setState(() =>{
-            return { products:tempProducts }
+        this.setState(() => {
+            return {products: tempProducts}
         });
     };
 
-    handleDetail = () =>{
-        console.log("Details here");
+    getItem = id => {
+        const product = this
+            .state
+            .products
+            .find(item => item.id === id);
+        return product;
+    }
+
+    handleDetail = id => {
+        const product = this.getItem(id);
+        this.setState(() => {
+            return {detailsProduct: product};
+        });
     };
 
-    addToCart = (id) =>{
-        console.log(`Add to cart here, id is ${id}`);
-    }; 
-
-
+    addToCart = () => {
+        console.log(`Add to cart here, id is `);
+    };
 
     render() {
         return (
-            <ProductContext.Provider value={{
+            <ProductContext.Provider
+                value={{
                 ...this.state,
-                handleDetail:this.handleDetail,
-                addToCart:this.addToCart,
+                handleDetail: this.handleDetail,
+                addToCart: this.addToCart
             }}>
                 {this.props.children}
             </ProductContext.Provider>
@@ -50,4 +63,4 @@ class ProductProvider extends Component {
 
 const ProductConsumer = ProductContext.Consumer;
 
-export { ProductProvider, ProductConsumer};
+export {ProductProvider, ProductConsumer};
