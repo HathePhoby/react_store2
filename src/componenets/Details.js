@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {ProductConsumer} from '../context';
 import {Link} from 'react-router-dom';
 import {ButtonContainer} from './Button';
@@ -7,8 +7,16 @@ export default class Details extends Component {
     render() {
         return (
             <ProductConsumer>
-                {value =>{
-                    const {id, company, img, info, price, title, inCart } = value.detailsProduct;
+                {value => {
+                    const {
+                        id,
+                        company,
+                        img,
+                        info,
+                        price,
+                        title,
+                        inCart
+                    } = value.detailsProduct;
                     return (
                         <div className="container py-5">
                             <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
@@ -27,7 +35,8 @@ export default class Details extends Component {
                                     </h4>
                                     <h4 className="text-blue">
                                         <strong>
-                                            price: <span>$</span>
+                                            price:
+                                            <span>$</span>
                                             {price}
                                         </strong>
                                     </h4>
@@ -40,23 +49,26 @@ export default class Details extends Component {
                                     <div>
                                         <Link to="/">
                                             <ButtonContainer
-                                            disabled={inCart ? true : false}
-                                            >
+                                                disabled={inCart
+                                                ? true
+                                                : false}>
                                                 Back to products
                                             </ButtonContainer>
                                         </Link>
-                                        <ButtonContainer 
-                                        cart
-                                        onClick={() => {
+                                        <ButtonContainer
+                                            cart
+                                            onClick={() => {
                                             value.addToCart(id);
                                         }}>
-                                            {inCart ? "inCart" : "Add to cart"}
+                                            {inCart
+                                                ? "inCart"
+                                                : "Add to cart"}
                                         </ButtonContainer>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    )                   
+                    )
                 }}
             </ProductConsumer>
         )

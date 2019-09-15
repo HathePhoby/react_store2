@@ -1,32 +1,32 @@
-:root{
-  --mainBlue: #0d0d0e;
-  --lightBlue: #009ffd;
-  --mainWhite: #f3f3f3;
-  --mainDark: #000000; 
-  --mainYellow: #ffa400;
+:root {
+    --mainBlue: #0d0d0e;
+    --lightBlue: #009ffd;
+    --mainWhite: #f3f3f3;
+    --mainDark: #000000;
+    --mainYellow: #ffa400;
 }
 
-body{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
- background: var(--mainWhite) !important;
- color: var(--mainDark) !important;
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    background: var(--mainWhite) !important;
+    color: var(--mainDark) !important;
 }
 
-.text-title{
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
+.text-title {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
 }
 
-.text-blue{
-  color: var(--mainBlue);
+.text-blue {
+    color: var(--mainBlue);
 
 }
 
 .cartUL {
-  margin-left: auto;
+    margin-left: auto;
 }
 
-text-bright{
-  color: var(--lightBlue);
+text-bright {
+    color: var(--lightBlue);
 }

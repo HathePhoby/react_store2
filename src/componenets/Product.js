@@ -24,8 +24,8 @@ export default class Product extends Component {
                                 <Link to="/details">
                                     <img src={img} alt="product" className="card-img-top"/>
                                 </Link>
-                                <button className="cart-btn" // disabled={inCart} // ? true
-                                    // : false}
+                                <button
+                                    className="cart-btn"
                                     onClick={() => {
                                     value.addToCart(id);
                                     console.log(id);
@@ -58,7 +58,6 @@ export default class Product extends Component {
     }
 }
 
-// Testing data to see if were getting it in the proper type
 Product.propTypes = {
     product: PropTypes
         .shape({id: PropTypes.number, img: PropTypes.string, title: PropTypes.string, price: PropTypes.number, inCart: PropTypes.bool})
