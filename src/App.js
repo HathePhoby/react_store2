@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './componenets/Navbar';
 import ProductList from './componenets/ProductList';
 import Details from './componenets/Details';
-import Cart from './componenets/Cart';
+import Cart from './componenets/Cart/Cart';
 import Default from './componenets/Default';
 import Modal from './componenets/Modal';
 
