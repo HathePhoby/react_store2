@@ -10,7 +10,8 @@ TUTORIAL USED FOR BUILD: https://www.youtube.com/watch?v=wPQ1-33teR4
    5.	Data is taken from data.js.
   
   Not-Added: 
-   1. Paypal button
+   1. Paypal button.
+   2. Registration / LogIn forms.
    
  Link to deployed project: 
    https://react-test-store.netlify.com
