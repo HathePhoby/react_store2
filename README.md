@@ -17,5 +17,6 @@ TUTORIAL USED FOR BUILD: https://www.youtube.com/watch?v=wPQ1-33teR4
    https://react-test-store.netlify.com
 
 #Update 1 : Error tolerance(Cloning Only):
+
    npm install react-scripts -g --> ‘react-scripts’ is not recognized as an internal or external command
    npm install bootstrap --> bootstrap.4
